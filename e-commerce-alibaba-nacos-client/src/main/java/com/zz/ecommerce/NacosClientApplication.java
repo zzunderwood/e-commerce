@@ -1,6 +1,20 @@
-package com.zz.ecommerce;/**
+package com.zz.ecommerce;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
+/**
+ * nacos client 工程启动入口
  * @Author zhaozhen
  * @Version 1.0
  * @Date 2023/6/7 02:26
-*/public class NacosClientApplication {
+ */
+@EnableDiscoveryClient
+@SpringBootApplication
+public class NacosClientApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(NacosClientApplication.class, args);
+    }
 }
